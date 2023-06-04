@@ -20,8 +20,10 @@ public class DisabledRegistrationTest {
 
   @Before
 public void setUp() {
-  String driverPath = System.getenv("GITHUB_WORKSPACE") + "/src/test/chromedriver/chromedriver.exe";
-  System.setProperty("webdriver.chrome.driver", driverPath);
+  String driverPath = "src/test/chromedriver/chromedriver.exe";
+  File file = new File(driverPath);
+  String absolutePath = file.getAbsolutePath();
+  System.setProperty("webdriver.chrome.driver", absolutePath);
   ChromeOptions options = new ChromeOptions();
   options.addArguments("--headless");
   driver = new ChromeDriver(options);
