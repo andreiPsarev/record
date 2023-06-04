@@ -19,15 +19,16 @@ public class DisabledRegistrationTest {
   private JavascriptExecutor js;
 
   @Before
-  public void setUp() {
-    String driverPath = "src/test/chromedriver/chromedriver";
-    System.setProperty("webdriver.chrome.driver", driverPath);
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("--headless");
-    driver = new ChromeDriver(options);
-    js = (JavascriptExecutor) driver;
-    vars = new HashMap<String, Object>();
-  }
+public void setUp() {
+  String driverPath = System.getenv("GITHUB_WORKSPACE") + "/src/test/chromedriver/chromedriver.exe";
+  System.setProperty("webdriver.chrome.driver", driverPath);
+  ChromeOptions options = new ChromeOptions();
+  options.addArguments("--headless");
+  driver = new ChromeDriver(options);
+  js = (JavascriptExecutor) driver;
+  vars = new HashMap<String, Object>();
+}
+
 
   @After
   public void tearDown() {
