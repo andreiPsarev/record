@@ -20,7 +20,7 @@ public class DisabledRegistrationTest {
 
   @Before
   public void setUp() {
-    String driverPath = "src/test/chromedriver/chromedriver.exe";
+    String driverPath = "src/test/chromedriver/chromedriver";
     System.setProperty("webdriver.chrome.driver", driverPath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
