@@ -18,8 +18,5 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
 
-    - name: Build with Maven
-      run: mvn clean install
-
     - name: Run Tests
       run: mvn test
