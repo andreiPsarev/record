@@ -21,7 +21,7 @@ public class DisabledRegistrationTest {
 
   @Before
 public void setUp() {
-  String driverPath = "src/test/chromedriver/chromedriver.exe";
+  String driverPath = "src/test/chromedriver/chromedriver";
   File file = new File(driverPath);
   String absolutePath = file.getAbsolutePath();
   System.setProperty("webdriver.chrome.driver", absolutePath);
