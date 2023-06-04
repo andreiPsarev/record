@@ -19,16 +19,14 @@ jobs:
         distribution: 'adopt'
 
     - name: Install Chrome
-    run: |
-      $chromeInstallerUrl = 'https://dl.google.com/chrome/install/375.126/chrome_installer.exe'
-      $chromeInstallerPath = "$env:TEMP\chrome_installer.exe"
+      run: |
+        $chromeInstallerUrl = 'https://dl.google.com/chrome/install/375.126/chrome_installer.exe'
+        $chromeInstallerPath = "$env:TEMP\chrome_installer.exe"
 
-      Invoke-WebRequest -Uri $chromeInstallerUrl -OutFile $chromeInstallerPath -UseBasicParsing
-      Start-Process -FilePath $chromeInstallerPath -Wait -PassThru
+        Invoke-WebRequest -Uri $chromeInstallerUrl -OutFile $chromeInstallerPath -UseBasicParsing
+        Start-Process -FilePath $chromeInstallerPath -Wait -PassThru
 
-      Remove-Item -Path $chromeInstallerPath
-
-
+        Remove-Item -Path $chromeInstallerPath
 
     - name: Run Tests
       run: mvnw.cmd test
