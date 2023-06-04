@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class DisabledRegistrationTest {
   private WebDriver driver;
