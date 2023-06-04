@@ -18,8 +18,11 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
 
-    - name: Set up Chrome on Windows
-      uses: webfactory/checkout-chrome@v3
+    - name: Install Chrome
+      run: |
+        curl -o chrome_installer.exe https://dl.google.com/chrome/install/375.126/chrome_installer.exe
+        start /wait chrome_installer.exe
+        del chrome_installer.exe
 
     - name: Run Tests
       run: mvnw.cmd test
