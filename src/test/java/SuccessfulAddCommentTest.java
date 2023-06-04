@@ -20,16 +20,16 @@ public class SuccessfulAddCommentTest {
   private Map<String, Object> vars;
   private JavascriptExecutor js;
 
-  @Before
-  public void setUp() {
-    String driverPath = "src/test/resources/chromedriver/chromedriver.exe";
-    System.setProperty("webdriver.chrome.driver", driverPath);
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("--headless");
-    driver = new ChromeDriver(options);
-    js = (JavascriptExecutor) driver;
-    vars = new HashMap<String, Object>();
-  }
+@Before
+public void setUp() {
+  String driverPath = System.getProperty("user.dir") + "/chromedriver.exe";
+  System.setProperty("webdriver.chrome.driver", driverPath);
+  ChromeOptions options = new ChromeOptions();
+  options.addArguments("--headless");
+  driver = new ChromeDriver(options);
+  js = (JavascriptExecutor) driver;
+  vars = new HashMap<String, Object>();
+}
 
   @After
   public void tearDown() {
