@@ -7,7 +7,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -18,5 +18,8 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
 
+    - name: Set up Chrome on Windows
+      uses: webfactory/checkout-chrome@v3
+
     - name: Run Tests
-      run: mvn test
+      run: mvnw.cmd test
