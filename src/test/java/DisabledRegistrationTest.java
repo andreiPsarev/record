@@ -22,10 +22,11 @@ public class DisabledRegistrationTest {
   private Map<String, Object> vars;
   private JavascriptExecutor js;
 
-    @Before
-    public void setUp() {
+@Before
+public void setUp() {
     String driverPath = "chromedriver.exe";
-    System.setProperty("webdriver.chrome.driver", driverPath);
+    String absolutePath = SuccessfulRegistrationTest.class.getClassLoader().getResource(driverPath).getPath();
+    System.setProperty("webdriver.chrome.driver", absolutePath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
     driver = new ChromeDriver(options);
