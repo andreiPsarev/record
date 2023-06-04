@@ -95,6 +95,13 @@
       <artifactId>selenium-java</artifactId>
       <version>3.141.59</version>
     </dependency>
+    
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.0.3</version>
+      <scope>test</scope>
+    </dependency>
 
   </dependencies>
 
@@ -183,6 +190,7 @@
                 </systemPropertyVariables>
             </configuration>
         </plugin>
+      
     </plugins>
   </build>
 </project>
