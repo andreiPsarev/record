@@ -22,8 +22,8 @@ public class SuccessfulRegistrationTest {
 
   @Before
   public void setUp() {
-    String driverPath = "./chromedriver/chromedriver.exe";
-    System.setProperty("webdriver.chrome.driver", driverPath);
+     String driverPath = "src/test/resources/chromedriver/chromedriver.exe";
+  System.setProperty("webdriver.chrome.driver", driverPath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
     driver = new ChromeDriver(options);
