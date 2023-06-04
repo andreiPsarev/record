@@ -22,7 +22,7 @@ public class LoginTest {
 
   @Before
   public void setUp() {
-    String driverPath = "C:\\chromedriver\\chromedriver.exe";
+    String driverPath = "./chromedriver/chromedriver.exe";
     System.setProperty("webdriver.chrome.driver", driverPath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
