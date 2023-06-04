@@ -8,6 +8,7 @@
   <artifactId>universe</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
+  
 
   <name>universe</name>
   <url>https://universe.fluffy.com</url>
