@@ -9,30 +9,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
+import java.util.*;
 
 public class DisabledRegistrationTest {
   private WebDriver driver;
   private Map<String, Object> vars;
   private JavascriptExecutor js;
 
-@Before
-public void setUp() {
-       String driverPath = System.getProperty("user.dir") + "/src/test/chromedriver/chromedriver.exe";
+  @Before
+  public void setUp() {
+    String driverPath = System.getProperty("user.dir") + "/src/test/chromedriver/chromedriver.exe";
     System.setProperty("webdriver.chrome.driver", driverPath);
-    System.setProperty("webdriver.chrome.driver", absolutePath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
     driver = new ChromeDriver(options);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
-}
+  }
 
   @After
   public void tearDown() {
