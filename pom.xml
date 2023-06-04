@@ -192,7 +192,7 @@
             <version>2.22.1</version>
             <configuration>
                 <systemPropertyVariables>
-                    <webdriver.chrome.driver>/path/to/chromedriver</webdriver.chrome.driver>
+                    <webdriver.chrome.driver>C:\recources\chromedriver\chromedriver.exe</webdriver.chrome.driver>
                     <!-- Додайте конфігурацію для інших драйверів, якщо потрібно -->
                 </systemPropertyVariables>
             </configuration>
