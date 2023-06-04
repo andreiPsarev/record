@@ -23,7 +23,7 @@ public class SuccessfulAddCommentTest {
 @Before
 public void setUp() {
     String driverPath = "chromedriver.exe";
-    String absolutePath = SuccessfulAddCommentTest.class.getClassLoader().getResource(driverPath).getPath();
+    String absolutePath = System.getProperty("user.dir") + "/" + driverPath;
     System.setProperty("webdriver.chrome.driver", absolutePath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
